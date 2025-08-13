@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A Dialogue with Identity - Raseel Gujral Ansal's design journey" />
+  <meta name="keywords" content="Raseel Gujral, design, architecture, interior design, art, heritage" />
+  <meta name="author" content="Raseel Gujral Ansal" />
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Century+Gothic:wght@400;700&display=swap" rel="stylesheet" />
+  <title>RGB Website</title>
+    
+</head>
+<body>
+  <div class="container">
+    <!-- Hero Section -->
+    <section class="hero-section text-center">
+      <!-- Left Logo Image animation -->
+      <video src="assets/Logo.webm"
+       autoplay
+       loop
+       muted
+       playsinline
+       preload="auto"
+       style="position: absolute; top: 20px; left: 20px; width: 75px; height: 75px; z-index: 2; object-fit: contain;">
+     </video>
+    
+      <!-- Right Icon Dots Image -->
+      <div class="hamburger" onclick="toggleSidebar()">
+        <div class="line">
+          <span><img src="assets/icon.png" alt="icon"></span>
+          <span><img src="assets/icon.png" alt="icon"></span>
+          <span><img src="assets/icon.png" alt="icon"></span>
+        </div>
+        <div class="line">
+          <span><img src="assets/icon.png" alt="icon"></span>
+          <span><img src="assets/icon.png" alt="icon"></span>
+          <span><img src="assets/icon.png" alt="icon"></span>
+        </div>
+        <div class="line">
+          <span><img src="assets/icon.png" alt="icon"></span>
+          <span><img src="assets/icon.png" alt="icon"></span>
+          <span><img src="assets/icon.png" alt="icon"></span>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="sidebar" id="sidebar">
+        <div class="close-icon" onclick="toggleSidebar()">✕</div>
+
+        <div class="menu">
+          <p>WHO WE ARE</p>
+          <p>WHAT WE DO</p>
+          <p style="color: #fcdde1;">OUR BRANDS</p>
+        </div>
+
+        <div class="services">
+          <div class="branding">
+            <p>RGA DESIGN LLP</p>
+            <p>CASA PARADOX LUXE</p>
+            <p>CASA POP</p>
+            <p>ARZAANI</p>
+            <p>RASEEL GUJRAL ART LEGACY</p>
+            <p>SATISH GUJRAL ART</p>
+          </div>
+        </div>
+        
+        <div class="menu">
+          <p>LET'S CONNECT</p>
+        </div>
+        
+        <div class="video-block">
+          <video autoplay muted loop playsinline width="100%" height="auto">
+            <source src="assets/ParadoxLuxe.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+
+        </div>
+      </div>
+    
+      <!-- <img src="assets/flower.gif" alt="Flower" class="flower-animate"/> -->
+      
+     <video src="assets/FLOWER_1.webm"
+       autoplay
+       loop
+       muted
+       playsinline
+       preload="auto" class="flower-animate">
+     </video>
+      <h1 class="hero-title-one scroll-reveal"> RASEEL</h1>
+      <div class="hero-title-two scroll-reveal">
+      GUJRAL ANSAL</div>
+  
+      <h1 class="hero-title">A Dialogue with Identity</h1>
+      <p class="hero-desc fade-in delay-1">
+        Raseel Gujral Ansal, a celebrated and innovative force in the world of multi-disciplinary design for close to four decades, brings her unparalleled expertise and artistic vision to this unique exploration. Known for her pioneering work in interior, spatial, and product design, Raseel is renowned for her ability to blend art, design, and heritage seamlessly. 
+      </p>
+    </section>
+
+ 
+    <!-- Design Section -->
+    <section class="design-section text-center">
+   
+         <video src="assets/House_01.webm"
+        autoplay
+        loop
+        muted
+        playsinline
+        preload="auto" class="design-bg">
+      </video>
+      <div class="design-overlay">
+        <h2 class="scroll-reveal custom-text" style="margin-top: 3rem;"><span class="custom-subtext satish-label">RGA</span> DESIGN</h2>
+        <span class="custom-subtext scroll-reveal delay-2 design-label show">LLP</span>
+        
+      </div>
+      <p class="scroll-reveal delay-1 design-subtext" style="margin-top: -8rem;">The beating heart of architectural and interior innovation</p>
+    </section>
+
+    <section class="paradox-section">
+      <div class="paradox-wrapper">
+        <!-- <img src="assets/paradox-panther.png" alt="Panther" class="paradox-image" /> -->
+        <video src="assets/Puma Comp.webm"
+        autoplay
+        loop
+        muted
+        playsinline
+        preload="auto" class="paradox-image">
+      </video>
+        <div class="paradox-text">
+          <span class="custom-subtext scroll-reveal satish-label">CASA</span>
+          <span class="maintext-para scroll-reveal delay-1">PARADOX</span>
+          <span class="custom-subtext scroll-reveal delay-2 para-label">LUXE</span>
+        </div>
+        <p class="paradox-caption scroll-reveal delay-3">
+          Iconic furniture and bespoke home concepts that fuse Indian heritage with contemporary design
+        </p>
+      </div>
+    </section>
+
+    <!-- SATISH GUJRAL SECTION -->
+    <!-- <section class="gujral-section">
+      <div class="gujral-wrapper">
+        <img src="assets/bull.png" alt="Gujral Sculpture" class="gujral-image" />
+        <h2 class="gujral-text">
+          <span class="custom-subtext scroll-reveal satish-label">SATISH</span>
+          <span class="custom-text scroll-reveal delay-1">GUJRAL</span>
+        </h2>
+        <p class="gujral-quote scroll-reveal delay-2">
+          "My life's work is a reflection of my journey, my struggles, and my triumphs."
+        </p>
+      </div>
+    </section> -->
+    <!-- SATISH GUJRAL SECTION -->
+<section class="gujral-section">
+  <div class="gujral-wrapper" style="position: relative; height: 500px; overflow: hidden;">
+    <img src="assets/bull.png" alt="Gujral Sculpture" class="gujral-image" id="img1"
+         style="position: absolute; left: 0; top: 0; transition: opacity 1s; opacity: 1; z-index:2;" />
+    <img src="assets/satish sir art.png" alt="Monkey on Couch" class="gujral-image" id="img2"
+         style="position: absolute; left: 0; top: 0; transition: opacity 1s; opacity: 0; z-index:3; border-radius: 4px;" />
+    <h2 class="gujral-text scroll-reveal"
+        style="position: absolute; z-index: 4; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+      <span class="custom-subtext scroll-reveal satish-label">SATISH</span>
+      <span class="custom-text scroll-reveal delay-1">GUJRAL</span>
+    </h2>
+  
+  </div>
+   <p class="gujral-quote scroll-reveal delay-2">
+  “My life’s work is a reflection of my journey, my struggles, and my triumphs.”
+</p>
+</section>
+<script>
+  // Fade effect after 2 seconds
+  setTimeout(() => {
+    document.getElementById('img1').style.opacity = '0';
+    document.getElementById('img2').style.opacity = '1';
+  }, 5000);
+</script>
+
+    <!-- RGAL ART SECTION -->
+    <section class="art-section">
+      <div class="art-wrapper">
+
+       <video src="assets/Monkey men.webm"
+       autoplay
+       loop
+       muted
+       playsinline
+       preload="auto" class="art-image">
+     </video>
+        <h2 class="art-text">
+          <span class="subtext-rga scroll-reveal rgal-label">RGAL</span>
+          <span class="maintext-art scroll-reveal delay-1">ART</span>
+        </h2>
+      </div>
+      <p class="paradox-caption scroll-reveal delay-3 subtext-art">
+        A lens into the artistic legacy and the evolution of Raseel's Art work
+      </p>
+    </section>
+
+    <!-- CASAPOP -->
+    <section class="art-section" style="padding-bottom: 10rem;">
+      <div class="art-wrapper">
+         <video src="assets/Fish_01_1.webm"
+       autoplay
+       loop
+       muted
+       playsinline
+       preload="auto" class="casa-img">
+     </video>
+        <h2 class="art-text">
+          <span class="maintext-art scroll-reveal delay-1">CASAPOP</span>
+        </h2>
+      </div>
+      <p class="paradox-caption scroll-reveal delay-3 subtext-arts">
+        A playful, maximalist take on modern Indianness
+      </p>
+    </section>
+
+    <!-- ARZAANI -->
+    <section class="art-section arzaani-section">
+      <div class="art-wrapper">
+                    <video src="assets/Sanke.webm"
+       autoplay
+       loop
+       muted
+       playsinline
+       preload="auto" class="casa-img">
+     </video>
+        <h2 class="art-text">
+          <span class="maintext-art scroll-reveal delay-1">ARZAANI</span>
+        </h2>
+      </div>
+      <p class="paradox-caption scroll-reveal delay-3 subtext-art_snake">
+        A curated celebration of indigenous luxury and artisanal craft
+      </p>
+    </section>
+
+    <footer>
+      <div class="footer-container">
+        <!-- Column 1 -->
+        <div class="footer-column">
+          <ul style="margin-top: 14px;">
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">CONTACT</a></li>
+            <li><a href="#">AWARDS</a></li>
+            <li><a href="#">MEDIA</a></li>
+            <li><a href="#">COLLABORATION</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="footer-column">
+          <div class="footer-links">
+            <p><a href="#">Cookie Policy</a></p>
+            <p><a href="#">Copyright Policy</a></p>
+            <p><a href="#">Privacy Policy</a></p>
+            <p><a href="#">Product Information</a></p>
+            <p><a href="#">FAq's : lifestyle@casaparadox.com</a></p>
+          </div>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="footer-column">
+
+          <div class="social-icons" style="margin-top:11rem">
+            <a href="#"><img src="https://simpleicons.org/icons/instagram.svg" alt="Instagram"></a>
+            <a href="#"><img src="https://simpleicons.org/icons/facebook.svg" alt="Facebook"></a>
+            <a href="#"><img src="https://simpleicons.org/icons/dribbble.svg" alt="Dribbble"></a>
+            <a href="#"><img src="https://simpleicons.org/icons/webflow.svg" alt="Webflow"></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Logo -->
+  <div class="footer-logo" style="position: relative; display: inline-block;">
+
+     RASEE<span id="raseel-l" style="position: relative; display: inline-block;">
+    L
+    <span style="position: absolute; left: 35%; top: -5.2rem; transform: translateX(-35%);">
+      <video src="assets/Butterfly.webm"
+        autoplay
+        loop
+        muted
+        playsinline
+        preload="auto"
+        style="width: 24vw; height: auto;">
+      </video>
+    </span>
+  </span>
+    </div>
+    <div class="footer-logo-text">
+      GUJRAL ANSAL
+    </div>
+   <div class="copyright">
+   © RGA DESIGN STUDIO 2025 – all rights reserved.
+   </div>
+
+  <script>
+    function toggleSidebar() {
+      document.getElementById('sidebar').classList.toggle('open');
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.3
+    });
+
+    document.querySelectorAll('.scroll-reveal').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
