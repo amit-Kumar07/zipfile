@@ -47,28 +47,27 @@
   opacity: 1;
 }
 
-.hero-section canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
-  z-index: 9999;
-  background: transparent;
-  opacity: 0.2;
-}
+    canvas {
+      position:absolute;
+      width: 100vw;
+      height: 100vh;
+      display: block;
+      cursor: crosshair;
+      background: transparent;
+      opacity: 0.2;
+      z-index: 2;
+    }
 
   </style>
     
 </head>
 <body>
 <div class="cursor-circle"></div>
-  <div class="container-fluid" style="padding: 0; margin: 0; overflow-x: hidden;">
-    
+  <div class="container-fluid">
+    <canvas></canvas>
     <!-- Hero Section -->
     <section class="hero-section text-center">
-      <canvas></canvas>
+      
               <!-- Left Logo Image animation -->
         <video src="assets/Logo.webm"
               autoplay
@@ -191,7 +190,7 @@
               loop
               muted
               playsinline
-              preload="auto" class="paradox-image">
+              preload="auto" class="paradox-image w-100 h-100">
             </video>
               <div class="paradox-text">
                 <span class="custom-subtext  casa-label">CASA</span>
@@ -272,70 +271,65 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
     </section>
 <!-- Typewriter JS -->
-    <script>
-          document.addEventListener("DOMContentLoaded", () => {
-            const quoteEl = document.querySelector('.gujral-quote');
-            if (!quoteEl) return;
+   <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const quoteEl = document.querySelector('.gujral-quote');
+    if (!quoteEl) return;
 
-            /** SETTINGS **/
-            const settings = {
-              text: quoteEl.textContent.trim(),
-              typeSpeed: 100,       // ms per character typed
-              deleteSpeed: 100,     // ms per character deleted
-              pauseBeforeDelete: 1500, // ms to wait before deleting
-              pauseBeforeType: 500     // ms to wait before typing again
-            };
+    /** SETTINGS **/
+    const settings = {
+      text: quoteEl.textContent.trim(),
+      typeSpeed: 100,       // ms per character typed
+      deleteSpeed: 100,     // ms per character deleted
+      pauseBeforeDelete: 1500, // ms to wait before deleting
+      pauseBeforeType: 500     // ms to wait before typing again
+    };
 
-            // Clear initial text & setup DOM structure
-            quoteEl.textContent = '';
-            const textSpan = document.createElement('span');
-            const cursorSpan = document.createElement('span');
-            cursorSpan.className = 'cursor';
-            cursorSpan.innerHTML = '&nbsp;';
-            quoteEl.appendChild(textSpan);
-            quoteEl.appendChild(cursorSpan);
+    // Clear initial text & setup DOM structure
+    quoteEl.textContent = '';
+    const textSpan = document.createElement('span');
+    quoteEl.appendChild(textSpan); // ❌ cursor append नहीं किया
 
-            // Typewriter Logic
-            const typewriter = () => {
-              let i = 0;
-              let deleting = false;
-              const { text, typeSpeed, deleteSpeed, pauseBeforeDelete, pauseBeforeType } = settings;
+    // Typewriter Logic
+    const typewriter = () => {
+      let i = 0;
+      let deleting = false;
+      const { text, typeSpeed, deleteSpeed, pauseBeforeDelete, pauseBeforeType } = settings;
 
-              function step() {
-                if (!deleting && i < text.length) {
-                  textSpan.textContent += text.charAt(i++);
-                  setTimeout(step, typeSpeed);
-                } else if (deleting && i > 0) {
-                  textSpan.textContent = text.substring(0, --i);
-                  setTimeout(step, deleteSpeed);
-                } else if (!deleting && i === text.length) {
-                  setTimeout(() => { deleting = true; step(); }, pauseBeforeDelete);
-                } else if (deleting && i === 0) {
-                  deleting = false;
-                  setTimeout(step, pauseBeforeType);
-                }
-              }
-              step();
-            };
+      function step() {
+        if (!deleting && i < text.length) {
+          textSpan.textContent += text.charAt(i++);
+          setTimeout(step, typeSpeed);
+        } else if (deleting && i > 0) {
+          textSpan.textContent = text.substring(0, --i);
+          setTimeout(step, deleteSpeed);
+        } else if (!deleting && i === text.length) {
+          setTimeout(() => { deleting = true; step(); }, pauseBeforeDelete);
+        } else if (deleting && i === 0) {
+          deleting = false;
+          setTimeout(step, pauseBeforeType);
+        }
+      }
+      step();
+    };
 
-            // Start only when visible
-            if ('IntersectionObserver' in window) {
-              const observer = new IntersectionObserver((entries, obs) => {
-                entries.forEach(entry => {
-                  if (entry.isIntersecting) {
-                    typewriter();
-                    obs.disconnect(); // start once, loop forever
-                  }
-                });
-              }, { threshold: 0.2 });
-              observer.observe(quoteEl);
-            } else {
-              typewriter(); // Fallback for old browsers
-            }
-          });
+    // Start only when visible
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            typewriter();
+            obs.disconnect(); // start once, loop forever
+          }
+        });
+      }, { threshold: 0.2 });
+      observer.observe(quoteEl);
+    } else {
+      typewriter(); // Fallback for old browsers
+    }
+  });
+</script>
 
-  
-   </script>
 
     <!-- RGAL ART SECTION -->
    
@@ -351,7 +345,7 @@ document.addEventListener("DOMContentLoaded", () => {
                   muted
                   playsinline
                   preload="auto"
-                  class="art-image w-100">
+                  class="art-image w-100 h-100 p-2">
               </video>
               <div class="art-text">
                   <span class="subtext-rga rgal-label">RGAL</span>
