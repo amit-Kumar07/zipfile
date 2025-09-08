@@ -92,61 +92,312 @@
   }
 
 
+/* 💻 Laptop & Desktop */
+@media (min-width: 992px) {
   .circus-section {
-  background-color: #000; /* black background */
-  padding: 60px 0;
+    padding: 4rem 9rem;
+    /* Max width control */
+    max-width: 1530px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
+/* 💻 Laptop & Desktop */
+@media (min-width: 992px) {
+  .circus-section {
+    padding: 4rem 9rem;
+  }
+}
+
+
+    
+.monkey-img {
+  position: absolute;
+  right: 5%;
+  top: 15%;
+  z-index: 0;
+
+  /* Responsive width */
+  width: clamp(180px, 35vw, 788px);
+
+  /* Maintain ratio automatically */
+  height: auto;
+  aspect-ratio: 37 / 46;
+
+  /* Prevent cut on small screens */
+  max-width: 90%;
+}
+
+
+
+ /* Heading */
 .circus-heading {
-  font-size: 3rem;
-  font-weight: 700;
   text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+  color: #FFF;
+  font-family: "MiedingerBold", sans-serif;
+  font-weight: 700;
+  line-height: 1.1;
+  
+  /* Fluid responsive font size */
+  font-size: clamp(28px, 4vw, 58px);
+  /* 28px = min (mobile),
+     4vw = fluid scaling,
+     58px = max (large desktop) */
 }
 
-.circus-heading .highlight {
-  color: #ff4d00; /* orange ? mark */
-}
-
-.circus-subtitle {
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-top: 1rem;
-}
-
-.circus-text {
-  font-size: 1rem;
-  line-height: 1.7;
-  margin-bottom: 1.2rem;
-  color: #ddd;
-}
-
-/* Monkey image adjustments */
-.circus-img {
-  max-height: 600px;
-  object-fit: contain;
-}
-
-/* Mobile adjustments */
-@media (max-width: 991px) {
+/* Extra tuning for very large screens */
+@media (min-width: 1600px) {
   .circus-heading {
-    font-size: 2rem;
+    font-size: 64px;
+  }
+}
+
+/* Extra tuning for small tablets */
+@media (max-width: 768px) {
+  .circus-heading {
     text-align: center;
+    line-height: 1.2;
   }
+}
 
-  .circus-subtitle, .circus-text {
-    text-align: left;
-  }
 
-  .circus-img {
-    max-height: 400px;
-    margin-bottom: 20px;
-  }
+    .circus-heading span {
+     color: #FB5E24; 
+    }
+
+    /* Signature + year */
+    .signature-block {
+      margin-top: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      position: relative;
+      z-index: 1;
+    }
+
+  
+    .signature-block img {
+      max-height: 50px;
+      width: auto;
+    }
+
+    .year-text {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #ff4500;
+    }
+
+    /* Content Text */
+  .circus-content {
+  margin-top: 2rem;
+  position: relative;
+  z-index: 1;
+
+  /* Typography */
+  font-family: "SafiroMedium", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  color: #FFF;
+
+  /* Responsive font-size */
+  font-size: clamp(14px, 1.1vw, 18px);
+  line-height: 1.6;
+
+  /* Max width for readability */
+  max-width: 1100px;
+
+  /* Default (desktop/laptop) */
+  text-align: left;
+}
+
+
+
+
+    /* Responsive Monkey Position */
+    @media (max-width: 768px) {
+      /* .monkey-img {
+        position: static;
+        display: block;
+        margin: 2rem auto;
+        max-width: 260px;
+      } */
+
+      .signature-block {
+        justify-content: center;
+      }
+
+      .circus-heading {
+        text-align: left;
+        font-size:36px !important;
+      }
+
+      .circus-content {
+        font-size: 0.95rem;
+      }
+    }
+  
+ .signature-block {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.5rem; /* space between items */
+  margin-top: 1rem;
+  flex-wrap: wrap; /* mobile view ke liye wrap karega */
+}
+/* Signature text */
+.sig-text {
+  color: #FFF;
+  text-align: center;
+  font-family: 'AmsterdamFour', cursive;
+  font-weight: 400;
+  font-style: normal;
+
+  /* Responsive font-size */
+  font-size: clamp(20px, 2.2vw, 38px);
+
+  /* Line height relative to font-size */
+  line-height: 1.9; /* same proportion as your given 197.539% */
+}
+
+
+.middle-img {
+  /* Responsive width */
+  width: clamp(40px, 8vw, 112px);
+
+  /* Maintain aspect ratio automatically */
+  aspect-ratio: 66 / 41;
+
+  height: auto;          /* auto height based on aspect ratio */
+  object-fit: contain;   /* preserve image quality */
+  flex-shrink: 0;        /* prevent shrinking in flexbox */
+}
+
+
+.year-text {
+  font-family: "MiedingerBold", sans-serif;
+  color: #FB5E24;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.2; /* better readability */
+
+  /* Responsive font size */
+  font-size: clamp(16px, 2vw, 24px);
+
+  /* Ensure alignment in center blocks */
+  display: inline-block;
 }
 
 
 .icon-default {
   color: #f2f2f2; /* any color you want */
 }
+
+
+
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .monkey-img {
+    position: absolute;
+    right: 0;          /* thoda right overlap */
+    top: 0;            /* heading ke paas */
+    width: 333px;        /* fixed width */
+    height: 414px;       /* fixed height */
+    aspect-ratio: 37/46; /* maintain proportion */
+    max-width: unset;    /* clamp hataya for fixed size */
+    opacity: 0.9;        /* thoda transparency readability ke liye */
+  }
+  }
+
+  .circus-heading {
+    position: relative;
+    z-index: 2;
+    font-size: clamp(20px, 6vw, 58px);
+    text-align: left;
+    line-height: 1.3;
+  }
+
+  .circus-content {
+    position: relative;
+    z-index: 2;
+  }
+
+
+/* Section wrapper */
+.paintings-section {
+  padding: 4rem 2rem;
+  max-width: 1300px;
+  margin: 0 auto;
+  background: #fff;
+}
+
+/* Heading */
+.paintings-heading {
+  font-family: "MiedingerBold", sans-serif;
+  font-size: clamp(28px, 4vw, 52px);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  color: #000;
+}
+
+/* Each painting block */
+.painting-block {
+  margin-bottom: 3rem;
+}
+
+/* Image styling */
+.painting-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+/* Painting title */
+.painting-title {
+  font-family: "MiedingerBold", sans-serif;
+  font-size: clamp(18px, 2vw, 28px);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  color: #000;
+}
+
+/* Description */
+.painting-desc {
+  font-family: "SafiroMedium", sans-serif;
+  font-size: clamp(14px, 1.2vw, 18px);
+  line-height: 1.6;
+  color: #111;
+}
+
+/* Responsive: spacing adjustments */
+@media (max-width: 768px) {
+  .paintings-section {
+    padding: 2rem 1rem;
+  }
+
+  .painting-block {
+    margin-bottom: 2rem;
+  }
+
+  .painting-title {
+    text-align: left;
+  }
+
+  .painting-desc {
+    text-align: left;
+  }
+}
+
+
+
+
   </style>
 </head>
 <body>
@@ -270,44 +521,104 @@
       
 
 
-    <section class="circus-section text-white">
-  <div class="container-fluid">
-    <div class="row align-items-center">
-      
-      <!-- Left Column: Text -->
-      <div class="col-12 col-lg-7 px-4 px-lg-5">
-        <h1 class="circus-heading">IS THIS MY CIRCUS <span class="highlight">?</span></h1>
-        <p class="circus-subtitle">I Am Sifar</p>
-        <h4 class="circus-subtitle">Is This My Circus?</h4>
+    <section class="circus-section container">
+        <!-- Heading -->
+        <h1 class="circus-heading">
+          IS THIS MY CIRCUS <span>?</span>
+        </h1>
 
-        <p class="circus-text">
-          I dream. The spark of an idea forms vivid, elusive, layered with emotions drawn from memory, imagination,
-          and intuition. But a dream is never static; it evolves...
+
+    <!-- Signature + Center Icon + 2025 -->
+    <div class="signature-block text-center">
+      <span class="sig-text">Sifar</span>
+      <img src="assets/rgal/elements/sifar.png" alt="Middle Icon" class="middle-img">
+      <span class="year-text">2025</span>
+    </div>
+
+        <!-- Monkey Image -->
+        <img src="assets/rgal/elements/monkey.png" alt="Monkey" class="monkey-img">
+
+        <!-- Content -->
+        <div class="circus-content">
+          <p><strong>I Am Sifar</strong><br>Is This My Circus?</p>
+
+          <p>I dream. The spark of an idea forms vivid, elusive, layered with emotions drawn from memory, imagination, and intuition. But a dream is never static. It evolves. 
+    In collaboration with AI, I explore its depths through an intense dialogue, where unexpected possibilities unfold. Together, we generate an image imbued with emotions 
+    nostalgia, wonder, or perhaps the quiet unease of curiosity. The result always surprises me, as if the dream reveals itself fully for the first time, no longer mine but something shared with the unknown.</p>
+
+          <p>Seeing this vision, I collaborate with my team, who are integral with their skills, to refine it, carefully introducing elements that complete the story I wish to tell. It’s a process of co-creation, where logic and instinct meet to shape the chaos. Once this digital reflection is perfected, it transforms from concept into something tangible a foundation on which the rest of the journey is built.</p>
+
+          <p>We then turn to artisanal studios, where master craftsmen bring their expertise to translate this vision into watercolor. Their hands breathe life into every stroke, infusing the work with texture and depth that only tradition can provide. Here, the dream is reborn, bridging the contemporary with the handmade, merging technology with the timeless touch of artistry.
         </p>
 
-        <p class="circus-text">
-          Seeing this vision, I collaborate with my team, who are integral with their skills, to refine it,
-          carefully introducing elements that complete the story I wish to tell...
-        </p>
+          <p>And yet, as each creation comes to life, I can’t help but ask: Is this really my circus, or am I merely one of its performers? In the act of creation, control is both necessary and illusory, and the line between ringmaster and participant often blurs. What begins as a whisper of thought becomes a vivid expression of emotion a story shared across 
+    mediums, cultures, and disciplines.
+    </p>
+      <p>Perhaps, in the end, that’s the beauty of it. Each creation asks me again: Is this my circus? Or am I the monkey?</p>
+      <p>The artist, perhaps, is a paradox both the dreamer and the craftsman, and yet neither at the same time. The dreamer gives birth to the idea, but the one who paints, who 
+    refines, and collaborates also shapes the outcome. Without either, the creation would be incomplete. Maybe the artist is the bridge the one who navigates the chaos of 
+    dreaming, directing, and surrendering. Or perhaps the true artist is the process itself, a living entity that transcends ownership, where the dreamer, the painter, the AI, and the artisans all play their part.
+    </p>
+    <p>And so, I ask again: Is this my circus? Or am I the monkey?
+    </p>
+          <p>I Am Sifar</p>
+          <p>This paradox of authorship finds its embodiment in Sifar, my symbolic signature. The word, written in Urdu, carries personal significance my father signed his early works in Urdu, and I now carry forward that tradition in a new form. Sifar is a seal, a mark that transcends individual ownership, embodying humility, infinite potential, and cultural 
+    connection .
+    </p>
+    <p>Like the zero, Sifar holds within it both emptiness and boundless possibility a space where ideas, dreams, and collaboration come to life. It rejects singular authorship, 
+    embracing co-creation. It is an identity, yet it is nameless.
+    </p>
+    <p>The circular form enclosing Sifar mirrors this infinite cycle creation without an end, authorship without ego. The mark is embossed or debossed, a subtle imprint rather than a claim. It is not a signature of ownership, but a testament to the process.
+    </p>
+    <p>
+    I am Sifar, an artist, a collaborator, a dreamer, and a questioner. I exist within the paradox, forever asking: Is this my circus?</p>
+        </div>
+    </section>
 
-        <p class="circus-text">
-          And yet, as each creation comes to life, I can’t help but ask: Is this really my circus, or am I the monkey?
-        </p>
 
-        <p class="circus-text">
-          I Am Sifar — This paradox of authorship finds its embodiment in Sifar, my symbolic signature...
-        </p>
-      </div>
+ <section class="paintings-section">
+  <!-- Heading -->
+  <h2 class="paintings-heading">PAINTINGS</h2>
 
-      <!-- Right Column: Image -->
-      <div class="col-12 col-lg-5 text-center">
-        <img src="assets/circus/monkey.png" alt="Circus Monkey" class="img-fluid circus-img">
-      </div>
+  <!-- Painting 1 -->
+  <div class="painting-block">
+    <img src="assets/rgal/elements/e2ce6.png" alt="My Raj" class="painting-img">
+    <div class="painting-info">
+      <h3 class="painting-title">MY RAJ</h3>
+      <p class="painting-desc">
+        A nuanced reflection on personal perceptions of independence. Through this lens, 
+        the circus becomes a stage for exploring the intertwining of history and identity, 
+        where liberation is both a celebration and a source of introspection.
+      </p>
+    </div>
+  </div>
 
+  <!-- Painting 2 -->
+  <div class="painting-block">
+    <img src="assets/rgal/elements/ec372.jpg" alt="War of the Roses" class="painting-img">  
+    <div class="painting-info">
+      <h3 class="painting-title">WAR OF THE ROSES</h3>
+      <p class="painting-desc">
+        Clad in uniformity, the performers resemble an army yet their weapons are roses. 
+        This tongue-in-cheek tableau explores the tensions of performative peace and veiled 
+        rivalry, where civility conceals competition, and affection becomes its own battlefield.
+      </p>
+    </div>
+  </div>
+  <!-- Painting 3 -->
+   <div class="painting-block">
+    <img src="assets/rgal/elements/e2ce6.png" alt="War of the Roses" class="painting-img">  
+    <div class="painting-info">
+      <h3 class="painting-title">WAR OF THE ROSES</h3>
+      <p class="painting-desc">
+        Clad in uniformity, the performers resemble an army yet their weapons are roses. 
+        This tongue-in-cheek tableau explores the tensions of performative peace and veiled 
+        rivalry, where civility conceals competition, and affection becomes its own battlefield.
+      </p>
     </div>
   </div>
 </section>
- 
+
 
 
 
