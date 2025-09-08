@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A Dialogue with Identity - Raseel Gujral Ansal's design journey" />
+  <meta name="keywords" content="Raseel Gujral, design, architecture, interior design, art, heritage" />
+  <meta name="author" content="Raseel Gujral Ansal" />
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="test1.css" />
+    <link rel="stylesheet" href="whatwedo.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Century+Gothic:wght@400;700&display=swap" rel="stylesheet" />
+      <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <title>Raseel Gujral Ansal</title>
+  <style> 
+  
+
+
+/* aniamtion text */
+ .headline-clip {
+  overflow: hidden; /* hides the text until it reveals */
+  display: inline-block;
+}
+
+
+.icon-default {
+  color: #f2f2f2; /* any color you want */
+}
+
+/* Hover Card */
+  .hover-card {
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+
+  /* Image fixed aspect ratio */
+  .contact-img {
+    aspect-ratio: 36 / 49;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    width: 100%;
+    height: auto;
+    max-width: 324px;
+    max-height: 441px;
+  }
+
+  /* Desktop exact size */
+  @media (min-width: 992px) {
+    .contact-img {
+      width: 324px;
+      height: 441px;
+    }
+  }
+
+  /* Hover effects */
+  .hover-card:hover .contact-img {
+    transform: scale(1.05);
+  }
+  .hover-card:hover h4,
+  .hover-card:hover p {
+    color: #f2cdcf;
+  }
+
+.cnt-call {
+  color: #FFF;
+  font-family: "MiedingerBold", sans-serif;
+  font-size: 27px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0 auto; /* center align for smaller screens */
+  text-align: center; /* optional for alignment */
+}
+
+.para {
+  color: #FFF;
+  font-family: "SafiroMedium", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin: 0 auto; /* center align for smaller screens */
+  text-align: center; /* optional, keeps text centered on mobile */
+}
+/* Desktop & Laptop view (≥992px) */
+@media (min-width: 992px) {
+  .cnt-call {
+    width: 460px;
+    font-size: 27px; /* keep your design size */
+    text-align: left; /* align left for large screens */
+  }
+  .para {
+    width: 460px;
+    font-size: 16px; /* keep your design size */
+    text-align: left; /* align left for large screens */
+  }
+}
+
+/* Tablet view (≥768px and <992px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .cnt-call {
+    width: 100%;
+    font-size: 22px; /* slightly smaller */
+  }
+  .para {
+    width: 100%;
+    font-size: 15px; /* slightly smaller */
+  }
+}
+
+/* Mobile view (<768px) */
+@media (max-width: 767px) {
+  .cnt-call {
+    width: 100%;
+    font-size: 20px; /* smaller text for mobile */
+  }
+    .para {
+    width: 100%;
+    font-size: 16px; /* smaller for mobile */
+  }
+}
+
+.row.gap-custom {
+  --bs-gutter-x: 3.75rem; /* 60px horizontal gap */
+  --bs-gutter-y: 3.75rem; /* 60px vertical gap */
+}
+
+</style>
+  </style>
+</head>
+<body>
+  <div class="cursor-circle"></div>
+    <div class="container-fluid" style="cursor:pointer ; padding: 0px;">
+         <!-- Hero Section -->
+      <section class="hero-section position-relative text-center text-lg-start">
+      <!-- Right Icon Dots Image -->
+          <div class="hamburger d-block  mt-0 mt-lg-3 " onclick="toggleSidebar()">
+            <div class="line">
+              <span><img src="assets/icon.png" alt="icon"></span>
+              <span><img src="assets/icon.png" alt="icon"></span>
+              <span><img src="assets/icon.png" alt="icon"></span>
+            </div>
+            <div class="line">
+              <span><img src="assets/icon.png" alt="icon"></span>
+              <span><img src="assets/icon.png" alt="icon"></span>
+              <span><img src="assets/icon.png" alt="icon"></span>
+            </div>
+            <div class="line">
+              <span><img src="assets/icon.png" alt="icon"></span>
+              <span><img src="assets/icon.png" alt="icon"></span>
+              <span><img src="assets/icon.png" alt="icon"></span>
+            </div>
+          </div>
+          <!-- Sidebar -->
+          <div class="sidebar" id="sidebar">
+            <div class="close-icon" onclick="toggleSidebar()">✕</div>
+
+                    <div class="menu">
+                    <a href="whoweare.html" class="anim-text">WHO WE ARE</a>
+                    <a href="#" class="anim-text">WHAT WE DO</a>
+                    <a href="#" class="anim-text" id="ourBrand">OUR BRANDS</a>
+                    </div>
+
+                    <div class="services" id="servicesBlock">
+                      <div class="branding">
+                          <p>RGA DESIGN LLP</p>
+                          <p>CASA PARADOX LUXE</p>
+                          <p>CASA POP</p>
+                          <p>ARZAANI</p>
+                          <p>RASEEL GUJRAL ART LEGACY</p>
+                          <p>SATISH GUJRAL ART</p>
+                      </div>
+                    </div>
+
+                    <div class="menu">
+                     <a  href="#" class="anim-text">LET'S CONNECT</a>
+                    </div>
+
+            
+                    <div class="video-block">
+                      <video autoplay muted loop playsinline width="100%" height="auto" style="border-radius: 4px;">
+                          <source src="assets/paradox.mp4" type="video/mp4" />
+                          Your browser does not support the video tag.
+                      </video>
+                        <!-- Play Button -->
+                      <!-- <button id="playBtn" class="play-button">
+                        ▶
+                      </button> -->
+                    </div>
+          </div>
+            <video src="assets/Logo.webm" autoplay="" loop="" muted="" playsinline="" preload="auto" class="position-absolute z-2 logo-video">
+            </video>
+  
+        <!-- Main Heading & Butterfly in Two Columns -->
+        <div class="container mt-0 pt-0 mt-md-5 pt-md-5 p-0">
+              <!-- Top Right Text & Button -->
+            <div class="mt-5 pe-3 pe-md-5" style="max-width: 515px; margin-left: auto;">
+                <p class="hero-sec-des">
+                 We don’t just design, we co-create. Every collaboration sparks a new expression. Together, we shape a design language that’s deeply personal and entirely unique.
+                </p>
+                <div class="button-component text-end">
+                  <a href="#" class="hero-sec-btn">
+                    <div class="label-clip">
+                      <div class="button-label">LET’S connect</div>
+                      <div class="button-label">LET’S connect</div>
+                    </div>
+                  </a>
+               </div>
+
+            </div>
+   <div class="row align-items-center" style="padding: 50px 0px;">
+      <div class="col-lg-8 text-start"> <!-- remove text-center -->
+        <div class="hero-container d-flex justify-content-start align-items-start">
+          <div class="hero-headline-wrapper d-flex flex-column align-items-start text-start">
+            <div class="headline-clip one"><div class="hero-heading text-start m-0">we engage</div></div>
+            <div class="headline-clip two"><div class="hero-heading text-start m-0">we</div></div>
+            <div class="headline-clip three"><div class="hero-heading text-start m-0">co-</div></div>
+            <div class="headline-clip four"><div class="hero-heading text-start m-0">create</div></div>
+          </div>
+        </div>
+      </div>
+   </div>
+
+
+        </div>
+     </section>
+
+
+        <section class="py-5 bg-black text-white">
+        <div class="container">
+            <div class="row text-center gap-custom">
+
+            <!-- Column 1 -->
+            <div class="col-12 col-md-4">
+                <div class="hover-card">
+                <h4 class="cnt-call text-uppercase">Connect on Call</h4>
+                <p class="para mb-4">Say hello on WhatsApp or ask us anything, we’re quick to respond</p>
+                <img src="assets/letstalk/elements/lets.png" alt="Connect on Call" class="contact-img mx-auto d-block">
+                </div>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="col-12 col-md-4">
+                <div class="hover-card">
+                <h4 class="cnt-call text-uppercase">Connect on Email</h4>
+                <p class="para mb-4">Use a traditional contact format to send us a quick message</p>
+                <img src="assets/letstalk/elements/dog.png" alt="Connect on Email" class="contact-img mx-auto d-block">
+                </div>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="col-12 col-md-4">
+                <div class="hover-card">
+                <h4 class="cnt-call text-uppercase">Book Your Visit</h4>
+                <p class="para mb-4">Call us for an in-person appointment at our showroom or experience centre in New Delhi.</p>
+                <img src="assets/letstalk/elements/men.png" alt="Book Your Visit" class="contact-img mx-auto d-block">
+                </div>
+            </div>
+
+            </div>
+        </div>
+        </section>
+
+
+
+    <!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+<!-- ===== prefooter Section ===== -->
+
+    <div class="slide-container" id="slideContainer">
+              <!-- Slide 1 - Let's Get Started -->
+              <div class="slide slide-1">
+                  <div class="slide-content">
+                      <h1 class="main-title">
+                          LET'S<br>
+                          begin a<br>
+                           dialogue
+                      </h1>
+                      <div class="description-container">
+                      <p class="description">
+                          Ready to turn your vision into something real? So are we.
+                        </p> 
+                        <p class="description">
+                            Share your contact information and we’ll get back to you to discuss next steps.
+                          </p>
+                      </div>
+                  </div>
+                  <!-- Replace your existing icon wrapper with this -->
+                    <div
+                      class="nav-arrow prefooter-icon-clip"
+                      role="button"
+                      aria-label="Next slide"
+                      tabindex="0"
+                      onclick="slideToNext()"
+                      onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();slideToNext();}"
+                    >
+                      <div class="prefooter-icon" aria-hidden="true">
+                        <!-- default -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59.87 60.58" class="icon-default">
+                          <style>.prefooter-arrow{fill:none;stroke:currentColor;stroke-miterlimit:10;stroke-width:16px}</style>
+                          <g>
+                            <line class="prefooter-arrow" x1="5.66" y1="5.66" x2="50.91" y2="50.91"></line>
+                            <polyline class="prefooter-arrow" points="51.87 17.22 51.87 52.58 16.51 52.58"></polyline>
+                          </g>
+                        </svg>
+
+                        
+
+                        <!-- hover state -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59.87 60.58" class="icon-hover">
+                          <style>.prefooter-arrow{fill:none;stroke:currentColor;stroke-miterlimit:10;stroke-width:16px}</style>
+                          <g>
+                            <line class="prefooter-arrow" x1="5.66" y1="5.66" x2="50.91" y2="50.91"></line>
+                            <polyline class="prefooter-arrow" points="51.87 17.22 51.87 52.58 16.51 52.58"></polyline>
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+              </div>
+              <!-- Slide 2 - Ask for Callback -->
+            <div class="slide slide-2">
+              <!-- Left Arrow -->
+                  <div
+                    class="nav-arrow prefooter-icon-clip-left"
+                    role="button"
+                    aria-label="Previous slide"
+                    tabindex="0"
+                    onclick="slideToFirst()"
+                    onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();slideToFirst();}"
+                  >
+                        <div class="prefooter-icons" aria-hidden="true">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59.87 60.58" class="icon-hover">
+                            <style>.prefooter-arrow{fill:none;stroke:currentColor;stroke-miterlimit:10;stroke-width:16px}</style>
+                            <g>
+                              <line class="prefooter-arrow" x1="50" y1="30" x2="10" y2="30"></line>
+                              <polyline class="prefooter-arrow" points="25,10 10,30 25,50"></polyline>
+                            </g>
+                          </svg>
+                        </div>
+                  </div>
+
+                  <!-- Right Form -->
+                  <div class="form-section">
+                    <h2 class="form-title">ASK FOR A CALL BACK</h2>
+                    <form>
+                      <div class="form-row">
+                        <div class="form-group">
+                          <label class="form-label">Name</label>
+                          <input type="text" class="form-control" placeholder="eg. xyz">
+                        </div>
+                        <div class="form-group">
+                          <label class="form-label">Number</label>
+                          <input type="tel" class="form-control" placeholder="987654321">
+                        </div>
+                        <button type="submit" class="submit-btn">SUBMIT</button>
+                      </div>
+                    </form>
+                  </div>
+            </div>
+    </div>
+
+    
+     <!-- Footer -->
+    <section class="footer-section">
+          <div class="container-fluid">
+                  <div class="row justify-content-between   mt-5 gap-sm-0 gap-md-0 gap-lg-0 gap-xl-0 gap-4 p-4">
+                      <!-- Column 1 -->
+                      <div class="col-4 col-md-6 col-lg-4 pt-0 pt-md-3 pt-lg-3">
+                      <div class="footer-column">
+                          <ul>
+                          <li><a href="#">ABOUT</a></li>
+                          <li><a href="#">CONTACT</a></li>
+                          <li><a href="#">AWARDS</a></li>
+                          <li><a href="#">MEDIA</a></li>
+                          <li><a href="#">COLLABORATION</a></li>
+                          </ul>
+                      </div>
+                      </div>
+
+                      <!-- Column 2 -->
+                      <div class="col-4 col-md-6 col-lg-4">
+                      <div class="footer-column">
+                          <div class="footer-links">
+                          <p><a href="#">Cookie Policy</a></p>
+                          <p><a href="#">Copyright Policy</a></p>
+                          <p><a href="#">Privacy Policy</a></p>
+                          <p><a href="#">Product Information</a></p>
+                          <!--<p><a href="#">FAq's : lifestyle@casaparadox.com</a></p>-->
+                          </div>
+                      </div>
+                      </div>
+
+                      <!-- Column 3 -->
+                      <div class="col-6 col-md-12 col-lg-4">
+                      <div class="footer-column">
+                          <div class="social-icons d-flex justify-content-center justify-content-lg-start mtop-9  ps-sm-0 ps-md-0 ps-lg-0 ps-xl-0 ps-4">
+                          <a href="https://www.youtube.com/@RaseelGujralAnsal" class="me-2"><img src="https://simpleicons.org/icons/youtube.svg" alt="YouTube"></a>
+                          <a href="https://www.instagram.com/raseelgujralansalofficial/" class="me-2"><img src="https://simpleicons.org/icons/instagram.svg" alt="Instagram"></a>
+                          <a href="https://www.facebook.com/share/16rnA1tZCN/" class="me-2"><img src="https://simpleicons.org/icons/facebook.svg" alt="Facebook"></a>
+                          <a href="#" class="me-2"><img src="https://simpleicons.org/icons/pinterest.svg" alt="Pinterest"></a>
+                          </div>
+                      </div>
+                      </div>
+                  </div>
+              
+
+
+              <!-- Footer Logo -->
+              <div class="row">
+              <div class="col-12">
+             <div class="footer-logo position-relative d-inline-block w-100 no-wrap-logo">
+               RASEE<span id="raseel-l" class="raseel-l">L<span class="butterfly-class">
+            <video src="assets/Butterfly.webm"
+                   autoplay
+                   loop
+                   muted
+                   playsinline
+                   preload="auto"
+                   class="butterfly-video">
+            </video>
+                </span>
+              </span>
+            </div>
+              </div>
+              <div class="col-12">
+                  <div class="footer-logo-text margin-top-adjust">
+                  GUJRAL ANSAL
+                  </div>
+              </div>
+              <div class="col-12">
+                  <div class="copyright">
+                  © RGA DESIGN STUDIO 2025 – all rights reserved.
+                  </div>
+              </div>
+              </div>
+          </div>
+    </section>
+    
+     <a href="https://wa.me/919313746825" 
+           class="whatsapp-float" 
+           target="_blank" 
+           aria-label="Chat on WhatsApp" 
+           data-bs-toggle="tooltip" 
+           data-bs-placement="left" 
+           title="Chat with us">
+           <i class="fa-brands fa-whatsapp"></i> </a>
+   </div>
+  
+    <!-- GSAP + ScrollTrigger -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
+
+   
+
+
+ <script>
+  // hero section animations
+  gsap.registerPlugin(ScrollTrigger);
+
+  ScrollTrigger.addEventListener("refreshInit", () => {
+    gsap.set(".headline-clip", { x: 0, clearProps: "transform" });
+  });
+
+  // One
+  gsap.to(".headline-clip.one", {
+    x: "-25vw",
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".hero-container",
+      start: "bottom 80%",
+      end: "bottom top",
+      scrub: 0.9
+    }
+  });
+
+  // Two
+  gsap.to(".headline-clip.two", {
+    x: "50vw",
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".hero-container",
+      start: "bottom 80%",
+      end: "bottom top",
+      scrub: 1
+    }
+  });
+
+  // Three
+  gsap.to(".headline-clip.three", {
+    x: "25vw",
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".hero-container",
+      start: "bottom 80%",
+      end: "bottom top",
+      scrub: 1.2
+    }
+  });
+
+  // Four
+  gsap.to(".headline-clip.four", {
+    x: "-10vw",
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".hero-container",
+      start: "bottom 80%",
+      end: "bottom top",
+      scrub: 0.8
+    }
+  });
+</script>
+
+<!-- gsap scroll trigger-->
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.utils.toArray(".content-col .block").forEach((block) => {
+      gsap.to(block, {
+        scrollTrigger: {
+          trigger: block,
+          start: "top 80%",
+          toggleActions: "play none none reverse"
+        },
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        ease: "power2.out"
+      });
+    });
+  </script>
+<!-- name section js -->
+   <script>
+   
+  gsap.registerPlugin(ScrollTrigger);
+
+  const namesList = document.querySelector("#namesList");
+  const items = gsap.utils.toArray(".names-item");
+  const itemHeight = items[0].offsetHeight;
+
+  gsap.to(namesList, {
+    y: () => -(items.length - 1) * itemHeight,
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".names-section",
+      start: "top top",           // start when section hits top
+      end: "+=" + (items.length * itemHeight),
+      scrub: true,
+      pin: true,                  // keeps section pinned
+      anticipatePin: 1
+    }
+  });
+
+  </script>
+
+
+
+
+
+ <script>
+        const slideContainer = document.getElementById('slideContainer');
+        let isSlideTwo = false;
+        
+        function slideToNext() {
+            if (!isSlideTwo) {
+                slideContainer.classList.add('slide-right');
+                isSlideTwo = true;
+            }
+        }
+        
+        function slideToFirst() {
+            if (isSlideTwo) {
+                slideContainer.classList.remove('slide-right');
+                isSlideTwo = false;
+            }
+        }
+        
+        // Handle form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Form submitted! We will get back to you soon.');
+        });
+    </script>
+<!-- =================== END PREFOOTER (Poison-style) =================== -->
+
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  const revealTexts = document.querySelectorAll(".reveal-text");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+        } else {
+          entry.target.classList.remove("active");
+        }
+      });
+    },
+    { threshold: 0.5 } // Trigger when 50% visible
+  );
+
+  revealTexts.forEach((el) => {
+    observer.observe(el);
+  });
+});
+
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="js/scripts.js"></script>
+</body>
+</html>
